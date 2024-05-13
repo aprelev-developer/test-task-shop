@@ -15,7 +15,7 @@ git clone https://github.com/your-username/test-task-shop.git
 2. Перейдите в директорию проекта:
 3. cd test-task-shop
 4. 3. Импортируйте файл `test-task-shop.sql` в вашу базу данных MySQL.
-4. Отредактируйте файл `app/config.php` и укажите настройки подключения к вашей базе данных.
+4. Отредактируйте файл `lib/DataBase/DatabaseConnection.php` и укажите настройки подключения к вашей базе данных.
 5. Убедитесь, что папки `app/tmp` и `public/htaccess` имеют права на запись.
 
 ## Настройка
