@@ -26,10 +26,10 @@ class DatabaseConnection
     {
         if (self::$pdo === null) {
 
-            $host = 'localhost';
-            $dbName = 'test-task-shop';
-            $username = 'root';
-            $password = 'Andreiaprelev1808';
+            $host = '';
+            $dbName = '';
+            $username = '';
+            $password = '';
 
             $dsn = "mysql:host=$host;dbname=$dbName;charset=utf8mb4";
 

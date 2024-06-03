@@ -4,7 +4,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/lib/Smarty/libs/Smarty.class.php';
 require_once 'route/Router.php';
 require_once 'lib/DataBase/DatabaseConnection.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/app/controllers/Auth.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/app/models/ProductModel.php'; // Путь к модели ProductModel.php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/models/ProductModel.php';
 
 define('TEMPLATE_DIR', $_SERVER['DOCUMENT_ROOT'] . '/templates/');
 define('TEMPLATE_C_DIR', $_SERVER['DOCUMENT_ROOT'] . '/templates_c/');
@@ -28,7 +28,7 @@ $router = require $_SERVER['DOCUMENT_ROOT'] . '/route/route.php';
 $templatePath = $router->route($url);
 
 $auth = new Auth($dbConnection);
-$productModel = new \models\ProductModel($dbConnection); // Используйте пространство имен models\ProductModel
+$productModel = new \models\ProductModel($dbConnection);
 
 $info = $auth->isAuthenticated();
 $style = $_SERVER['DOCUMENT_ROOT'] . '/app/style/less/main.less';

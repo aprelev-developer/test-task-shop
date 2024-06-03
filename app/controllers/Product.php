@@ -26,8 +26,7 @@ class Product
      */
     public function createProduct(string $name, float $price, string $description): bool
     {
-        // Убраны строки переопределения переменных $_POST, так как данные уже передаются в качестве аргументов метода
-
+    
         // Валидация данных товара
         $validator = new ProductValidator();
         if (!$validator->validateProductData($name, $price, $description)) {
