@@ -27,9 +27,9 @@ class DatabaseConnection
         if (self::$pdo === null) {
 
             $host = 'localhost';
-            $dbName = 'andre6fd_ftp';
-            $username = 'andre6fd_ftp';
-            $password = 'AndreiAp12_Ft#@+1';
+            $dbName = 'test-task-shop';
+            $username = 'root';
+            $password = 'Andreiaprelev1808';
 
             $dsn = "mysql:host=$host;dbname=$dbName;charset=utf8mb4";
 

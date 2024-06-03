@@ -76,7 +76,7 @@ class Auth
                 // Сохраняем информацию о пользователе в сессии
                 session_start(); // Начинаем сессию
                 $_SESSION['user'] = $userData;
-                header('Location: /main');
+                header('Location: /user_profile');
                 exit(); // Важно завершить выполнение скрипта после перенаправления
             } else {
                 // Неправильный пароль

@@ -41,12 +41,26 @@ $dbConnection = \lib\DatabaseConnection::getInstance();
 $router = new Router($dbConnection);
 
 // Добавляем основные маршруты
-$router->addRoute('/', 'app/views/auth/auth.tpl');
+$router->addRoute('/', 'app/views/index.tpl');
+$router->addRoute('/auth', 'app/views/auth/auth.tpl');
 $router->addRoute('/register', 'app/views/auth/register.tpl');
 $router->addRoute('/main', 'app/views/main.tpl');
 $router->addRoute('/products', 'app/views/products/product.tpl');
 $router->addRoute('/edit-product/{id}', 'ProductController@editAction');
 $router->addRoute('/error', 'app/views/error.tpl');
+$router->addRoute('/user_profile', 'app/views/user_profile.tpl');
+$router->addRoute('/create-course', 'app/views/create-course.tpl');
+$router->addRoute('/create-test', 'app/views/create-test.tpl');
+$router->addRoute('/about', 'app/views/about.tpl');
+$router->addRoute('/course', 'app/views/client/course.tpl');
+$router->addRoute('/contact', 'app/views/contact.tpl');
+$router->addRoute('/course', 'app/views/catalog.tpl');
+
+//страница администратора
+$router->addRoute('/admin/', 'app/views/admin/panel.tpl');
+$router->addRoute('/admin/user_list', 'app/views/admin/user_list.tpl');
+$router->addRoute('/admin/question', 'app/views/admin/question.tpl');
+
 
 // Добавляем маршруты для контроллеров
 $router->addRoute('/register-controller', 'Register@registerUser');
@@ -54,6 +68,10 @@ $router->addRoute('/auth-controller', 'Auth@authenticate');
 $router->addRoute('/check-status', 'Auth@isAuthenticated');
 $router->addRoute('/add-product', 'Product@createProduct');
 $router->addRoute('/logout', 'Auth@logout');
+
+
+//добавление стилей
+$router->addRoute('/css', 'public/less/main.css');
 
 // Возвращаем объект маршрутизатора
 return $router;
